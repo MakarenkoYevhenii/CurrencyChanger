@@ -1,0 +1,27 @@
+<div class="wrapper">
+  <form class="form">
+
+    <input value="{{ first }}" (input)="firstValue($event)" class="input" />
+
+    <mat-select [(value)]="selectedValue1" (openedChange)="firstPereshitat()">
+      <mat-option value="UAH">uah</mat-option>
+      <mat-option value="USD">usd</mat-option>
+      <mat-option value="EUR">eur</mat-option>
+    </mat-select>
+
+    <input
+      value="{{ second }}"
+      (input)="secondValue($event)"
+      class="input"
+    /><mat-select
+      class="form"
+      [(value)]="selectedValue2"
+      value="USD"
+      (openedChange)="secondPereshitat()"
+    >
+      <mat-option value="UAH">uah</mat-option>
+      <mat-option value="USD">usd</mat-option>
+      <mat-option value="EUR">eur</mat-option>
+    </mat-select>
+  </form>
+</div>
